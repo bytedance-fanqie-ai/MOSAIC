@@ -1,4 +1,5 @@
-<h3 align="center">
+## Project Page
+<!-- <h3 align="center">
     <img src="assets/logo.png" alt="Logo" style="vertical-align: middle; width: 40px; height: 40px;">
     MOSAIC: Multi-Subject Personalized Generation via Correspondence-Aware Alignment and Disentanglement
 </h3>
@@ -34,4 +35,4 @@ To support research and the open-source community, we will release the entire pr
 - ⬜ Release inference code
 - ⬜ Release model checkpoints
 
-<!-- ✅ -->
+✅ -->
