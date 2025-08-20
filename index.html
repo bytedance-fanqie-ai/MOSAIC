@@ -303,20 +303,18 @@
 
 
 
-<section class="hero is-small">
+<!-- <section class="hero is-small">
   <div class="hero-body" style="width: 60%; margin: 0 auto;">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
       <h2 class="title is-3">More Results</h2>
         <div class="carousel-teaser-container">
           <div class="carousel-teaser" id="carousel">
-            <!-- loop images -->
           <img src="static/images/more4.png" alt="Image 2">
           <img src="static/images/more3.png" alt="Image 3">
           <img src="static/images/more2.png" alt="Image 4">
           <img src="static/images/more1.png" alt="Image 5">
 
-            <!-- 再复制一遍 -->
           <img src="static/images/more4.png" alt="Image 2">
           <img src="static/images/more3.png" alt="Image 3">
           <img src="static/images/more2.png" alt="Image 4">
@@ -325,16 +323,14 @@
         </div>
         <div class="carousel-teaser-container">
           <div class="carousel-teaser" id="carousel">
-            <!-- loop images -->
-          <img src="static/images/more2.png" alt="Image 1">
-          <img src="static/images/more3.png" alt="Image 2">
-          <img src="static/images/more4.png" alt="Image 3">
-          <img src="static/images/more1.png" alt="Image 5">
+          <img src="static/images/more1.png" alt="Image 1">
+          <img src="static/images/more2.png" alt="Image 2">
+          <img src="static/images/more3.png" alt="Image 3">
+          <img src="static/images/more4.png" alt="Image 5">
 
-            <!-- 再复制一遍 -->
-          <img src="static/images/more2.png" alt="Image 1">
-          <img src="static/images/more3.png" alt="Image 2">
-          <img src="static/images/more4.png" alt="Image 3">
+          <img src="static/images/more1.png" alt="Image 1">
+          <img src="static/images/more2.png" alt="Image 2">
+          <img src="static/images/more.png" alt="Image 3">
           <img src="static/images/more1.png" alt="Image 5">
           </div>
         </div>
@@ -377,7 +373,68 @@
 .carousel-teaser-container:nth-of-type(2) .carousel-teaser {
   animation: scrollRight 45s linear infinite;
 }
+</style> -->
+
+
+
+
+
+<section class="hero is-small">
+  <div class="hero-body" style="width: 72%; margin: 0 auto;">
+    <div class="container">
+      <h2 class="title is-3">More Results</h2>
+    <div class="carousel-teaser-container">
+      <div class="carousel-teaser" id="carousel">
+        <img src="static/images/more1.png" alt="Image 1">
+        <img src="static/images/more2.png" alt="Image 2">
+        <img src="static/images/more3.png" alt="Image 3">
+        <img src="static/images/more4.png" alt="Image 4">
+
+        <img src="static/images/more1.png" alt="Image 1">
+        <img src="static/images/more2.png" alt="Image 2">
+        <img src="static/images/more3.png" alt="Image 3">
+        <img src="static/images/more4.png" alt="Image 4">
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.carousel-teaser-container {
+  overflow: hidden;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.carousel-teaser {
+  display: flex;
+  width: max-content;
+}
+
+.carousel-teaser img {
+  height: 200px;
+  margin-right: 20px;
+  border-radius: 8px;
+}
+
+@keyframes scrollLeft {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@keyframes scrollRight {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+
+.carousel-teaser-container:nth-of-type(1) .carousel-teaser {
+  animation: scrollLeft 45s linear infinite;
+}
+.carousel-teaser-container:nth-of-type(2) .carousel-teaser {
+  animation: scrollRight 45s linear infinite;
+}
 </style>
+
 
 
 
@@ -430,95 +487,6 @@
     </div>
   </div>
 </section>
-
-
-
-
-<!-- <section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Experimental Results</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-image">
-            <img src="static/images/pipeline.png" alt="Paper image presentation" />
-          </div>
-          <p style="text-align: justify;"> 
-            MOSAIC introduces two key supervisions: (1) Semantic Correspondence Attention Loss (blue region) enforces precise point-to-point alignment between reference tokens and their corresponding locations in the target latent, ensuring high consistency; (2) Multi-Reference Disentanglement Loss (green region) maximizes the divergence between different references’ attention distributions, pushing each subject into orthogonal representational subspaces.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section> -->
-
-
-<!-- Video carousel -->
-<!-- <section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
-<!-- End video carousel -->
-
-
-
 
 
 
