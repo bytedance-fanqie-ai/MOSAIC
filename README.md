@@ -33,5 +33,6 @@ To support research and the open-source community, we will release the entire pr
 - ⬜ Release arXiv paper
 - ⬜ Release inference code
 - ⬜ Release model checkpoints
+- ⬜ Release the SemAlign-MS dataset
 
 <!-- ✅ -->
