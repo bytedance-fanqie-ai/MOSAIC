@@ -12,10 +12,7 @@ accelerate==1.1.1
 prodigyopt
 datasets
 torchvision
-pycocotools==2.0.10
 tensorboard
 numpy==1.26.4
 pandas
-func_timeout
-decord
 matplotlib

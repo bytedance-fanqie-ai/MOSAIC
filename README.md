@@ -5,6 +5,12 @@
 
 <p align="center"> 
 <a href="https://bytedance-fanqie-ai.github.io/MOSAIC/"><img alt="Build" src="https://img.shields.io/badge/Project%2520Page-MOSAIC-blue?style=flat&logo=aaa&label=Project%20Page"></a> 
+<a href="https://arxiv.org/abs/2509.01977v1"><img alt="Build" src="https://img.shields.io/badge/arXiv-MOSAIC-red
+"></a>
+<a href="https://huggingface.co/ByteDance-FanQie/MOSAIC"><img src="https://img.shields.io/static/v1?label=%F0%9F%A4%97%20Hugging%20Face&message=Model&color=green"></a>
+</p>
+
+
 
 
 <!-- ><p align="center"> <span style="color:#137cf3; font-family:Gill Sans">Dong She<sup>*</sup></span>, <span style="color:#137cf3; font-family:Gill Sans">Siming Fu<sup>*</sup></span>, <span style="color:#137cf3; font-family:Gill Sans">Mushui Liu<sup>*</sup></span>,<span style="color:#137cf3; font-family:Gill Sans">Qiaoqiao Jin<sup>*</sup></span>, <span style="color:#137cf3; font-family:Gill Sans">Hualiang Wang<sup>*</sup></span>,  <br> <span style="color:#137cf3; font-family:Gill Sans">Mu Liu</span>, <span style="color:#137cf3; font-family:Gill Sans">Jidong Jiang<sup>+</sup></span></a> <br>
@@ -24,6 +30,8 @@
 </p>
 
 
+<img src="assets/teaser.png" width=95% height=95% 
+class="center">
 
 
 ## 🔥 News
@@ -32,10 +40,7 @@
 - [08/20/2025] The [project page](https://bytedance-fanqie-ai.github.io/MOSAIC/) of MOSAIC is released.
 
 ## 📖 Introduction
-<p align="center">
-<img src="assets/teaser.png" width=95% height=95% 
-class="center">
-</p>
+
 We present <b>MOSAIC</b>, a representation-centric framework that rethinks multi-subject generation through explicit semantic correspondence and orthogonal feature disentanglement. Our key insight is that multi-subject generation requires precise semantic alignment at the representation level—knowing exactly which regions in the generated image should attend to which parts of each reference. 
 <p align="center">
 <img src="assets/pipeline.png" width=95% height=95% 
@@ -44,7 +49,28 @@ class="center">
 MOSAIC introduces two key supervisions: (1) <b>Semantic Correspondence Attention Loss</b> (blue region) enforces precise point-to-point alignment between reference tokens and their corresponding locations
 in the target latent, ensuring high consistency; (2) <b>Multi-Reference Disentanglement Loss</b> (green region) maximizes the divergence between different references’ attention distributions, pushing each subject into orthogonal representational subspaces.
 
-## 🚀 Updates
+## ⚡️ Quick Start
+
+### 🔧 Requirements and Installation
+
+Install the requirements
+```bash
+conda create -n mosaic python=3.10 -y
+conda activate mosaic
+pip install -r requirements.txt
+```
+
+### ✍️ Inference
+```bash
+python inference.py 
+```
+It will download the Flux-dev model and the MOSAIC checkpoints, then execute the pre-configured demo case. You are then encouraged to experiment and create your own unique outputs by edit [example_cases.json](example_cases.json).
+
+
+### 🚄 Training
+To set up the preprocessing environment, first download the [DIFT](https://github.com/Tsingularity/dift) and [Geo-aware](https://github.com/Junyi42/GeoAware-SC) codebases. Next, integrate our preprocessing scripts by copying [dift_point_matching.py](preprocess/dift_point_matching.py) and [geoaware_point_matching.py](preprocess/geoaware_point_matching.py) into their respective directories. You can then run these scripts to generate Semantic Correspondence for your own dataset. Then you could train the code by `bash train.sh`
+
+## TODO
 To support research and the open-source community, we will release the entire project—including datasets, inference pipelines, and model weights. Thank you for your patience and continued support! 🌟
 - ✅ Release arXiv paper
 - ✅ Release codes
