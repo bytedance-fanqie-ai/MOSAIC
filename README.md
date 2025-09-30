@@ -34,7 +34,8 @@ in the target latent, ensuring high consistency; (2) <b>Multi-Reference Disentan
 To support research and the open-source community, we will release the entire project—including datasets, inference pipelines, and model weights. Thank you for your patience and continued support! 🌟
 - ✅ Release arXiv paper
 - ✅ Release codes
-- ✅ Release model checkpoints (512x512), 1024x1024 is coming soon.
+- ✅ Release model checkpoints (512x512).
+- ⬜ Release model checkpoints (1024x1024).
 - ⬜ Release the SemAlign-MS dataset 
 
 <!-- ✅ -->
