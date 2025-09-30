@@ -84,7 +84,7 @@ from src.flux_omini import (
 from src.flux_omini_mosaic import transformer_forward
 
 # My Modules
-from my_datasets.Subject200k_dataset import Subjects200K
+from my_datasets.Subject200k_dataset import Subjects200K, make_collate_fn, make_collate_fn_w_coord
 
 from utils import (
     count_parameters_in_M, 
@@ -663,14 +663,13 @@ def compute_align_sep_losses(attn_map, coords, ref_len):
             target = torch.tensor([tgt_idx], device=pred_dist.device)
             # loss = F.cross_entropy(pred_dist.unsqueeze(0), target)  # (1, tgt_len) vs (1,)  attn_map 已经做过一次 softmax，所以这里用 nll_loss 等价于 cross_entropy
             pred_log_prob = torch.log(pred_dist + 1e-9)  # [tgt_len]
-            loss = F.nll_loss(pred_log_prob.unsqueeze(0), target)  # 等价于 -log(p[target])
+            loss = F.nll_loss(pred_log_prob.unsqueeze(0), target)
             losses_align.append(loss)
 
     loss_align = torch.stack(losses_align).mean() if losses_align else torch.tensor(0.0, device=attn_map.device)
 
     # --- 2. ref-image level 分布分离 ---
     if num_refs >= 2:
-        # attn_map = attn_map[: num_refs * ref_len] # 截断 pad 的全黑 ref 图
         attn_map_reshaped = attn_map.view(num_refs, ref_len, tgt_len)  # [num_refs, ref_len, tgt_len]
         avg_tokens = attn_map_reshaped.mean(dim=1)  # [num_refs, tgt_len]
         # avg_tokens = F.normalize(avg_tokens, p=2, dim=-1)  # L2 归一化
@@ -709,35 +708,9 @@ def log_validation(args, pipe, device, weight_dtype, img_log_dir, step=0, num_im
             "image_paths": [
                 "/mnt/bn/shedong/consistent_image_generation/benchmarks/dreambench/rc_car/03_white_bg.jpg"
             ]
-        },
-        {
-            "prompt": "A bowl and a vase are on the dining table in the living room.",
-            "image_paths": [
-                "/mnt/bn/shedong/consistent_image_generation/benchmarks/dreambench/berry_bowl/04_white_bg.jpg",
-                "/mnt/bn/shedong/consistent_image_generation/benchmarks/dreambench/vase/02_white_bg.jpg",
-            ]
-        },
-        {
-            "prompt": "A cat is stretched out comfortably beside a leather handbag and a clock, basking in a patch of sunlight streaming through the window.",
-            "image_paths": [
-                "/mnt/bn/shedong/consistent_image_generation/benchmarks/XVerseBench/animal/21_Siamese cat.jpg",
-                "/mnt/bn/shedong/consistent_image_generation/benchmarks/XVerseBench/object/57_leather handbag.jpg",
-                "/mnt/bn/shedong/consistent_image_generation/benchmarks/XVerseBench/object/56_clock.jpg",
-            ]
-        },
-        {
-            "prompt": "A man and a woman are standing in a living room. On the table beside them, there is a vase, a bowl, and a deer-shaped tabletop ornament, adding a unique artistic touch to the room.",
-            "image_paths": [
-                "/mnt/bn/shedong/consistent_image_generation/benchmarks/comparison/images/man.png",
-                "/mnt/bn/shedong/consistent_image_generation/benchmarks/comparison/images/woman.png",
-                "/mnt/bn/shedong/consistent_image_generation/benchmarks/comparison/images/vase.png",
-                "/mnt/bn/shedong/consistent_image_generation/benchmarks/comparison/images/bowl.png",
-                "/mnt/bn/shedong/consistent_image_generation/benchmarks/comparison/images/placement.png",
-            ]
         }
     ]
 
-    # 循环跑三次
     for case_idx, case in enumerate(test_cases):
         # 处理参考图像
         appearance_imgs = [
