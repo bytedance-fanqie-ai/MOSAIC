@@ -1103,7 +1103,6 @@ def main(args):
     for epoch in range(first_epoch, args.num_train_epochs):
         transformer.train()
         for step, batch in enumerate(train_dataloader):
-            # =============== 可视化 step 0 的结果: 不要单独创建 iter_loader, 会导致进程不同步 ===========
             if global_step == 0 and accelerator.is_main_process:
                 pipe = FluxPipeline(
                     vae=vae,
