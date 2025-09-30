@@ -7,8 +7,22 @@
 <a href="https://bytedance-fanqie-ai.github.io/MOSAIC/"><img alt="Build" src="https://img.shields.io/badge/Project%2520Page-MOSAIC-blue?style=flat&logo=aaa&label=Project%20Page"></a> 
 
 
-><p align="center"> <span style="color:#137cf3; font-family:Gill Sans">Dong She<sup>*</sup></span>, <span style="color:#137cf3; font-family:Gill Sans">Siming Fu<sup>*</sup></span>, <span style="color:#137cf3; font-family:Gill Sans">Mushui Liu<sup>*</sup></span>,<span style="color:#137cf3; font-family:Gill Sans">Qiaoqiao Jin<sup>*</sup></span>, <span style="color:#137cf3; font-family:Gill Sans">Hualiang Wang<sup>*</sup></span>,  <br> <span style="color:#137cf3; font-family:Gill Sans">Mu Liu</span>, <span style="color:#137cf3; font-family:Gill Sans">Jidong Jiang<sup>+</sup></span></a> <br>
-><span style="font-size: 16px">Fanqie AI Team, ByteDance</span></p>
+<!-- ><p align="center"> <span style="color:#137cf3; font-family:Gill Sans">Dong She<sup>*</sup></span>, <span style="color:#137cf3; font-family:Gill Sans">Siming Fu<sup>*</sup></span>, <span style="color:#137cf3; font-family:Gill Sans">Mushui Liu<sup>*</sup></span>,<span style="color:#137cf3; font-family:Gill Sans">Qiaoqiao Jin<sup>*</sup></span>, <span style="color:#137cf3; font-family:Gill Sans">Hualiang Wang<sup>*</sup></span>,  <br> <span style="color:#137cf3; font-family:Gill Sans">Mu Liu</span>, <span style="color:#137cf3; font-family:Gill Sans">Jidong Jiang<sup>+</sup></span></a> <br>
+><span style="font-size: 16px">Fanqie AI Team, ByteDance</span></p> -->
+
+<p align="center"> 
+  <a href="https://scholar.google.com/citations?user=DcVoflUAAAAJ&hl=zh-CN&oi=ao"><span style="color:#137cf3; font-family:Gill Sans">Dong She<sup>*</sup></span></a>, 
+  <a href="https://scholar.google.com/citations?user=tql_Zc4AAAAJ&hl=zh-CN&oi=ao"><span style="color:#137cf3; font-family:Gill Sans">Siming Fu<sup>*</sup></span></a>, 
+  <a href="https://scholar.google.com/citations?user=-WUyWpMAAAAJ&hl=zh-CN&oi=ao"><span style="color:#137cf3; font-family:Gill Sans">Mushui Liu<sup>*</sup></span></a>, 
+  <a href="https://scholar.google.com/citations?user=zWQf0XcAAAAJ&hl=zh-CN&oi=ao"><span style="color:#137cf3; font-family:Gill Sans">Qiaoqiao Jin<sup>*</sup></span></a>, 
+  <a href="https://scholar.google.com/citations?user=4lzd8NsAAAAJ&hl=zh-CN&oi=ao"><span style="color:#137cf3; font-family:Gill Sans">Hualiang Wang<sup>*</sup></span></a>,  
+  <br> 
+  <span style="color:#137cf3; font-family:Gill Sans">Mu Liu</span></a>, 
+  <span style="color:#137cf3; font-family:Gill Sans">Jidong Jiang<sup>+</sup></span></a> 
+  <br>
+  <span style="font-size: 16px">Fanqie AI Team, ByteDance</span>
+</p>
+
 
 
 
