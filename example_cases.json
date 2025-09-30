@@ -1,0 +1,68 @@
+[   
+    {
+        "index": 0,
+        "prompt": "A toy car on a wooden floor.",
+        "image_paths": [
+            "assets/rc_car.jpg"
+        ]
+    },
+
+    {
+        "index": 1,
+        "prompt" : "A beer can is placed on the wooden table.",
+        "image_paths": [
+            "assets/can.jpg"
+        ]
+    },
+
+    {
+        "index": 2,
+        "prompt": "A bowl and a vase are on the dining table in the living room.",
+        "image_paths": [
+            "assets/berry_bowl.jpg",
+            "assets/vase.jpg"
+        ]
+    },
+
+    {
+        "index": 3,
+        "prompt": "A camera is placed on a armchair.",
+        "image_paths": [
+            "assets/24_vintage camera.jpg",
+            "assets/11_armchair.jpg"
+        ]
+    },
+    
+    {
+        "index": 4,
+        "prompt": "A cat is stretched out comfortably beside a leather handbag and a clock, basking in a patch of sunlight streaming through the window.",
+        "image_paths": [
+            "assets/21_Siamese cat.jpg",
+            "assets/57_leather handbag.jpg",
+            "assets/56_clock.jpg"
+        ]
+    },
+
+    {
+        "index": 5,
+        "prompt": "A woman plays a guitar while sitting on the grass, with her hat and backpack resting quietly at her side.",
+        "image_paths": [
+            "assets/09_woman.jpg",
+            "assets/01_hat.jpg",
+            "assets/39_guitar.jpg",
+            "assets/28_backpack.jpg"
+        ]
+    },
+    
+    {
+        "index": 6,
+        "prompt": "A man and a woman are standing in a living room. On the table beside them, there is a vase, a bowl, and a deer-shaped tabletop ornament, adding a unique artistic touch to the room.",
+        "image_paths": [
+            "assets/man.png",
+            "assets/woman.png",
+            "assets/vase1.png",
+            "assets/bowl.png",
+            "assets/placement.png"
+        ]
+    }
+]

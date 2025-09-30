@@ -13,7 +13,9 @@
 
 
 ## 🔥 News
-- [08/20/2025] 🔥 The [project page](https://bytedance-fanqie-ai.github.io/MOSAIC/) of MOSAIC is released.
+- [30/09/2025] 🔥 Release training/inference codes and [models](https://huggingface.co/ByteDance-FanQie/MOSAIC)(resolution 512x512). The vision of resolution 1024x1024 is coming soon.
+- [02/09/2025] The [arXiv paper](https://arxiv.org/abs/2509.01977v1) of MOSAIC is released.
+- [08/20/2025] The [project page](https://bytedance-fanqie-ai.github.io/MOSAIC/) of MOSAIC is released.
 
 ## 📖 Introduction
 <p align="center">
@@ -30,9 +32,9 @@ in the target latent, ensuring high consistency; (2) <b>Multi-Reference Disentan
 
 ## 🚀 Updates
 To support research and the open-source community, we will release the entire project—including datasets, inference pipelines, and model weights. Thank you for your patience and continued support! 🌟
-- ⬜ Release arXiv paper
-- ⬜ Release inference code
-- ⬜ Release model checkpoints
-- ⬜ Release the SemAlign-MS dataset
+- ✅ Release arXiv paper
+- ✅ Release codes
+- ✅ Release model checkpoints (512x512), 1024x1024 is coming soon.
+- ⬜ Release the SemAlign-MS dataset 
 
 <!-- ✅ -->
