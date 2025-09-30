@@ -5,8 +5,7 @@
 
 <p align="center"> 
 <a href="https://bytedance-fanqie-ai.github.io/MOSAIC/"><img alt="Build" src="https://img.shields.io/badge/Project%2520Page-MOSAIC-blue?style=flat&logo=aaa&label=Project%20Page"></a> 
-<a href="https://arxiv.org/abs/2509.01977v1"><img alt="Build" src="https://img.shields.io/badge/arXiv-MOSAIC-red
-"></a>
+<a href="https://arxiv.org/abs/2509.01977v1"><img alt="Build" src="https://img.shields.io/badge/axXiv-MOSAIC-red?style=flat"></a>
 <a href="https://huggingface.co/ByteDance-FanQie/MOSAIC"><img src="https://img.shields.io/static/v1?label=%F0%9F%A4%97%20Hugging%20Face&message=Model&color=green"></a>
 </p>
 
