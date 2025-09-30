@@ -35,9 +35,9 @@ class="center">
 
 
 ## 🔥 News
-- [30/09/2025] 🔥 Release training/inference codes and [models](https://huggingface.co/ByteDance-FanQie/MOSAIC)(resolution 512x512). The vision of resolution 1024x1024 is coming soon.
-- [02/09/2025] The [arXiv paper](https://arxiv.org/abs/2509.01977v1) of MOSAIC is released.
-- [08/20/2025] The [project page](https://bytedance-fanqie-ai.github.io/MOSAIC/) of MOSAIC is released.
+- **2025-09-30**: 🔥 Release training/inference codes and [models](https://huggingface.co/ByteDance-FanQie/MOSAIC)(resolution 512x512). The vision of resolution 1024x1024 is coming soon.
+- **2025-09-02**: The [arXiv paper](https://arxiv.org/abs/2509.01977v1) of MOSAIC is released.
+- **2025-08-20**: The [project page](https://bytedance-fanqie-ai.github.io/MOSAIC/) of MOSAIC is released.
 
 ## 📖 Introduction
 
