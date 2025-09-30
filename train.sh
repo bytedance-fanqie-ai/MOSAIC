@@ -1,5 +1,5 @@
 #!/bin/bash
-# 启动训练命令
+
 echo "Starting the training script..."
 
 # 参数配置
@@ -8,8 +8,6 @@ ref_size=512
 height=512
 width=512
 bsz=1
-num_machines=${ARNOLD_WORKER_NUM}
-num_processes=$((ARNOLD_WORKER_NUM * ARNOLD_WORKER_GPU))
 
 lr="8e-5"
 optimizer="adamw"
