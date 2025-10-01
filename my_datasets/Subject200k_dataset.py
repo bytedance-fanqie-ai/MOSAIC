@@ -92,13 +92,6 @@ class Subjects200K(Dataset):
         self.ref_size = ref_size # resize 大小
         self.tgt_size = tgt_size # resize 大小
         self.img_size = img_size # 原图大小
-        self.caption_prefix = [
-                        "The two-panel image presents a xx in various scenes.", 
-                        "The two-panel image showcases a xx in different scenes.",
-                        "The two-panel image emphasizes a xx in different scenarios.",
-                        "The two-panel image visuals illustrate a xx in diverse scenes.",
-                        "The two-panel image features a xx in different scenarios."
-                    ]
         
         self.i_drop_rate = i_drop_rate
         self.t_drop_rate = t_drop_rate
@@ -236,17 +229,15 @@ class Subjects200K(Dataset):
             return self.__getitem__(new_index)
 
 
-def make_collate_fn(num_refs: int = 3):
+def make_collate_fn(num_refs: int = 6):
     """
     返回一个带参数的 collate_fn，以便 DataLoader 中简单写:
-        collate_fn = make_collate_fn(num_refs=3)
+        collate_fn = make_collate_fn(num_refs=6)
     """
     def _collate(examples):
         # ---- 1. 先确定图像基础形状 (C,H,W) ----
         # 以第一条样本的 tgt_img 作为参考
         c, h, w = examples[0]["ref_imgs"][0].shape
-        pad_ref_img = torch.zeros(c, h, w, dtype=examples[0]["ref_imgs"][0].dtype)
-
         # ---- 2. 收集并 pad / truncate 参考图 ----
         ids = []
         ref_imgs = []
@@ -299,17 +290,15 @@ def make_collate_fn(num_refs: int = 3):
     return _collate
 
 
-def make_collate_fn_w_coord(num_refs: int = 3):
+def make_collate_fn_w_coord(num_refs: int = 6):
     """
     返回一个带参数的 collate_fn，以便 DataLoader 中简单写:
-        collate_fn = make_collate_fn(num_refs=3)
+        collate_fn = make_collate_fn(num_refs=6)
     """
     def _collate(examples):
         # ---- 1. 先确定图像基础形状 (C,H,W) ----
         # 以第一条样本的 tgt_img 作为参考
         c, h, w = examples[0]["ref_imgs"][0].shape
-        pad_ref_img = torch.zeros(c, h, w, dtype=examples[0]["ref_imgs"][0].dtype)
-
         # ---- 2. 收集并 pad / truncate 参考图 ----
         ids = []
         ref_imgs = []
@@ -371,10 +360,10 @@ if __name__ == "__main__":
     import random
     from datasets import load_dataset
 
-    data_files = {"train":os.listdir("/mnt/bn/shedong/hf_data/Yuanshi/Subjects200K/data")}
+    data_files = {"train":os.listdir("Yuanshi/Subjects200K/data")}
     dataset = load_dataset(
         "parquet", 
-        data_dir="/mnt/bn/shedong/hf_data/Yuanshi/Subjects200K/data", 
+        data_dir="Yuanshi/Subjects200K/data", 
         data_files=data_files,
         # features=features
     )["train"]
@@ -397,8 +386,8 @@ if __name__ == "__main__":
         mode="train",
         ref_size=ref_size,
         tgt_size=tgt_size,
-        grounding_dir="/mnt/bn/shedong/hf_data/Yuanshi/Subjects200K/mask",
-        coord_folder="/mnt/bn/shedong/hf_data/Yuanshi/Subjects200K/coord",
+        grounding_dir="ByteDance-FanQie/SemAlign-MS-Subjects200K/mask",
+        coord_folder="ByteDance-FanQie/SemAlign-MS-Subjects200K/coord",
     )
 
     train_dataloader = torch.utils.data.DataLoader(

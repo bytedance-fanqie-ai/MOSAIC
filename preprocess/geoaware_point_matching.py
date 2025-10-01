@@ -14,7 +14,7 @@ import numpy as np
 from torchvision import transforms
 from datasets import load_dataset
 
-from my_datasets.Subject200k_dataset import Subjects200K
+from my_datasets.Subject200k_dataset import Subjects200K, make_collate_fn
 
 
 def get_processed_features(sd_model, sd_aug, aggre_net, extractor_vit, num_patches, img=None, img_path=None):

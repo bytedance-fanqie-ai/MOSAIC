@@ -12,7 +12,7 @@ from datasets import load_dataset
 
 
 from src.models.dift_sd import SDFeaturizer
-from my_datasets.Subject200k_dataset import Subjects200K
+from my_datasets.Subject200k_dataset import Subjects200K, make_collate_fn
 
 
 def set_seed(seed=42):

@@ -973,8 +973,8 @@ def main(args):
 
     # Dataset and DataLoaders creation ===============================
     # subject200k
-    data_files = {"train":os.listdir("/mnt/bn/shedong/hf_data/Yuanshi/Subjects200K/data")}
-    dataset_subject200k = load_dataset("parquet", data_dir="/mnt/bn/shedong/hf_data/Yuanshi/Subjects200K/data", data_files=data_files)
+    data_files = {"train":os.listdir("ByteDance-FanQie/SemAlign-MS-Subjects200K/data")}
+    dataset_subject200k = load_dataset("parquet", data_dir="ByteDance-FanQie/SemAlign-MS-Subjects200K/data", data_files=data_files)
     def filter_func(item):
         if item.get("collection") != "collection_2":
             return False
@@ -994,8 +994,8 @@ def main(args):
         original_dataset=dataset_subject200k_valid,
         ref_size=args.ref_size,
         tgt_size=args.height,
-        grounding_dir="/mnt/bn/shedong/hf_data/Yuanshi/Subjects200K/mask",
-        coord_folder="/mnt/bn/shedong/hf_data/Yuanshi/Subjects200K/coord",
+        grounding_dir="ByteDance-FanQie/SemAlign-MS-Subjects200K/mask",
+        coord_folder="ByteDance-FanQie/SemAlign-MS-Subjects200K/coord",
         mode="train", t_drop_rate=0.05, i_drop_rate=0.05, ti_drop_rate=0.05, # dropout for cfg
         add_postfix=False,
     )
