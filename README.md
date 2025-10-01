@@ -79,7 +79,7 @@ To support research and the open-source community, we will release the entire pr
 - ✅ Release the SemAlign-MS-Subjects200K dataset.
 - ✅ Release model checkpoints (512x512).
 - ⬜ Release model checkpoints (1024x1024).
-- ✅ Release the multi-subject driven dataset generation pipeline.
+- ⬜ Release the multi-subject driven dataset generation pipeline.
 
 <!-- ✅ -->
 
