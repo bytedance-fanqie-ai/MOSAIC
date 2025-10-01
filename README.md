@@ -74,7 +74,6 @@ To set up the preprocessing environment, first download the [DIFT](https://githu
 
 ## TODO
 To support research and the open-source community, we will release the entire project—including datasets, inference pipelines, and model weights. Thank you for your patience and continued support! 🌟
-- ✅ Release arXiv paper.
 - ✅ Release tarining and inference codes.
 - ✅ Release the SemAlign-MS-Subjects200K dataset.
 - ✅ Release model checkpoints (512x512).
