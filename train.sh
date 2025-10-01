@@ -61,4 +61,5 @@ accelerate launch --config_file "./accelerate_config.yaml" \
     --max_grad_norm 1.0 \
     --report_to "tensorboard" \
     --ema \
-    --gradient_checkpointing
+    --gradient_checkpointing \
+    --get_attn_maps
